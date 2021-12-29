@@ -1,0 +1,183 @@
+/* Base Styles */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+:root{
+  --s-99: .1rem;
+  --s-98: .2rem;
+  --s-50: .5rem;
+  --s0: 1rem;
+  --s1: 2rem;
+  --s2: 3rem;
+
+  --font-size-m: 1.6rem;
+  --font-size-l: 2.4rem;
+
+  --color-blue-dark: #4d90fe;
+  --color-grey: #fafafa;
+  --color-white: #fff;
+  --color-black: #262626;
+}
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  background-color: var(--color-grey);
+  color: var(--color-black);
+  padding-bottom: var(--s2);
+}
+
+img {
+  display: block;
+  object-fit: cover;
+}
+
+.icon {
+  fill: var(--color-white);
+  width: 2rem;
+  height: 2rem;
+}
+
+.container {
+  max-width: 93.5rem;
+  /* TODO: CENTER CONTAINER */
+  padding: 0 var(--s2);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+} 
+
+.bolden {
+  font-weight: 600;
+}
+
+/* Profile Section */
+.profile {
+  /* TODO: CREATE GRID FOR PROFILE SECTION */
+
+}
+
+.profile__image {
+/* TODO: POSITION IMAGE */
+}
+
+.profile__image img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile__user-settings {
+  margin-top: var(--s-50);
+  display: flex;
+  align-items: center;
+}
+
+.profile__username {
+  font-size: var(--font-size-l);
+  font-weight: 300;
+  margin-right: var(--s1);
+}
+
+.profile__follow-btn {
+  background: var(--color-blue-dark);
+  color: var(--color-white);
+  padding: var(--s-50);
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  border: var(--s-99) solid var(--color-grey);
+  border-radius: var(--s-98);
+}
+
+.profile__stats{
+    margin-top: var(--s-50);
+    display: flex;
+    flex-flow: row;
+}
+
+.profile__stat { margin-right: var(--s2); }
+
+.profile__real-name { 
+    display: block; 
+    margin-bottom: var(--s-50);
+}
+
+.profile__bio { margin-top: var(--s1); }
+
+/* Gallery Section */
+
+.gallery {
+/* TODO: CREATE GRID FOR GALLERY */
+
+}
+
+.placeholder{
+  animation: placeHolderShimmer 2.25s linear infinite forwards;
+  background: #F6F6F6;
+  background: linear-gradient(to right, #F6F6F6 8%, #F0F0F0 18%, #F6F6F6 33%);
+  
+  width: 280px;
+  height: 280px;
+  position: relative;
+}
+
+.gallery-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-item a {
+  color: var(--color-white);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.gallery-item__info {
+  display: none;
+}
+
+.gallery-item:hover .gallery-item__info,
+.gallery-item:focus .gallery-item__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 280px;
+  height: 280px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item__info li {
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.gallery-item__info .icon {
+  vertical-align: middle;
+}
+
+.gallery-item__likes {
+    margin-right: 2.2rem;
+}
+
+/* Animation */
+@keyframes placeHolderShimmer{
+  0% {
+    background-position: -46.8rem 0
+  }
+  100% {
+    background-position: 46.8rem 0
+  }
+}
